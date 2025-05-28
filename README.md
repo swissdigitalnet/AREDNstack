@@ -1,5 +1,7 @@
-Attention: The phonebook package no longer works with version 3.25.2 on the hap lite router because it is out of memory. It still works on the hap AC3 router.
+Attention: The phonebook package is not compatible with all AREDN releases on the hap ac lite due to an out-of-memory problem. Currently tested by Dany, hb9zic:
+HAP ac lite and the newest version of phonebook (https://github.com/arednch/packages/releases/tag/v1.3 )
 
+We recommend using the HAP AC3 instead of the HAP AC Lite router when you first start with AREDN.
 
 You find the documentation in the documentation folder (e.g. Installation of phonebook replication on hap router.pdf)
 
