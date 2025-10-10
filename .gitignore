@@ -3,3 +3,8 @@
 *.vsdx
 *.log
 Archive/
+
+# Claude Code
+.claude/
+.claude_code/
+claude_history.jsonl
