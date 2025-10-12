@@ -8,3 +8,6 @@ Archive/
 .claude/
 .claude_code/
 claude_history.jsonl
+gemini.md
+agents.md
+claude.md
