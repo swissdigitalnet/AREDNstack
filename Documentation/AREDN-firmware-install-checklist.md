@@ -105,6 +105,7 @@ Based on *AREDN Setup V2.3*.
 > After firstuse, AREDN **moves the LAN off `192.168.1.x`** onto a random `10.x.x.x/29` range. Pinging `192.168.1.1` will fail — that's expected, not a boot failure.
 
 - [ ] Change your PC back to **DHCP**
+- [ ] Force a fresh DHCP lease so the PC picks up the new subnet: `ipconfig /release && ipconfig /renew` in a command prompt. (Without this, the PC may keep its old `192.168.1.20` lease until it expires.)
 - [ ] Check the new LAN addressing: `ipconfig` → your Ethernet adapter should have an IPv4 like `10.x.x.x` with DNS suffix `local.mesh`. The **Default Gateway** is the hAP's new LAN IP.
 - [ ] Open **`http://localnode.local.mesh/`** — this is the normal way to reach an AREDN node. `http://localnode/` (short name) and the gateway IP also work as fallbacks.
 - [ ] Log in to the administration interface (user `root`, password you just set)
