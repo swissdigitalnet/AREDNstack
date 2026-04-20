@@ -60,7 +60,7 @@ Pre-packaged firmware and a template configuration file for quick provisioning:
 ### Snom
 
 Snom phones are currently not supported.
-Setup documentation included — see `Documentation/Phones/`.
+Some documentation is included — see `Documentation/Phones/`.
 
 ---
 
