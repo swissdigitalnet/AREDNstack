@@ -7,6 +7,32 @@ Based on *AREDN Setup V2.3* by Andreas Spiess, HB9BLA.
 
 ---
 
+## Prerequisites
+
+### 🔧 Hardware
+
+- [ ] **MikroTik HAP AC Lite** or **HAP AC3** router
+- [ ] 📡 *or* **MikroTik SXTsq** dish (single Ethernet port)
+- [ ] **AC power supply** (24V) for the HAP router
+- [ ] 📡 **PoE injector** (Y-cable) or passive PoE switch for the SXTsq (24V — the HAP power supply also works)
+- [ ] **Dumb Ethernet switch** (unmanaged, no DHCP)
+- [ ] **2x Ethernet cables** (one PC-to-switch, one switch-to-device)
+- [ ] **SIP phone** (Yealink T-series recommended)
+- [ ] **Ethernet cable** to connect the phone to the HAP router (port 2–4)
+- [ ] **Paperclip or toothpick** for pressing the reset button
+
+### 💻 Software & Files
+
+- [ ] **Windows PC** with Ethernet port
+- [ ] [AREDNstack repo](https://github.com/swissdigitalnet/AREDNstack) (download as ZIP)
+- [ ] [Tiny PXE Server](http://erwan.labalec.fr/tinypxeserver/pxesrv.zip)
+- [ ] **AREDN firmware** files for your device from https://downloads.arednmesh.org/afs/www/
+  - **kernel** file (will be renamed to `rb.elf`)
+  - **sysupgrade** file
+- [ ] **Yealink phone firmware** (from `Firmware Repo/` in the AREDNstack repo, if needed)
+
+---
+
 ## 1. Preparation
 
 - [ ] Download the [AREDNstack repo](https://github.com/swissdigitalnet/AREDNstack) as ZIP and extract it
