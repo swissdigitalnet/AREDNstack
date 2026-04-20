@@ -62,49 +62,42 @@ Based on *AREDN Setup V2.3*.
 
 ---
 
-## 3. Power the Target Device
+## 3. Flash rb.elf via PXE Boot
 
-- [ ] **HAP router**: power with the **AC power supply** (do NOT use PoE)
-- [ ] 📡 **SXTsq**: power with a **PoE injector** (Y-cable) or passive PoE switch (24V — the HAP power supply also works)
-- [ ] Wait until the device is ready:
-  - **HAP**: wait until the top red LED is off and the green LED #1 flickers (~3 minutes)
-  - 📡 **SXTsq**: wait for power LED to stabilize
-
----
-
-## 4. Flash rb.elf via PXE Boot
+> Leave the target device **unpowered** until the PXE server is Online.
 
 - [ ] Start `pxesrv.exe` (allow it through Windows firewall if prompted)
 - [ ] Select IP `192.168.1.50` from the dropdown
 - [ ] Select `rb.elf` as the Boot File
 - [ ] Uncheck "Filename if user class..."
-- [ ] **Unplug power** from the target device
 - [ ] Click **"Online"** in Tiny PXE Server
 - [ ] Press and **hold the reset button** on the target device (use a paperclip)
-- [ ] **Plug power back in** while holding reset
-- [ ] Watch the PXE log — when you see `"Do ReadFile:rb.elf ..."` **release the reset button** (~20 seconds)
+- [ ] **Plug power in** (HAP: AC adapter — do NOT use PoE; 📡 SXTsq: PoE injector / passive PoE switch) while holding reset
+- [ ] Front **green LED** cycles on → flashing → off (~5 s each) while booting into PXE
+- [ ] Watch the PXE log — when you see `"Do ReadFile:rb.elf ..."` **release the reset button** (~20 seconds total)
 - [ ] Click **"Offline"** in Tiny PXE Server immediately after
 - [ ] **Do NOT unplug power** — keep the device powered!
 - [ ] Wait a few minutes for the process to complete
 
 > If new requests keep appearing in the PXE window, try a different PC (one with minimal software).
+> Don't hold reset too long or you'll have to start over.
 
 ---
 
-## 5. Flash AREDN Sysupgrade Firmware
+## 4. Flash AREDN Sysupgrade Firmware
 
 - [ ] Move the Ethernet cable:
   - **HAP router**: move cable from port 1 to **port 2**
   - 📡 **SXTsq**: leave cable in the **same (only) socket**
 - [ ] Open a browser and go to `http://192.168.1.1`
-- [ ] Verify you see the AREDN initial setup page (if not, go back to step 4)
+- [ ] Verify you see the AREDN initial setup page (if not, go back to step 3)
 - [ ] Select the **sysupgrade file** for your device and click **"Upload"**
 - [ ] Wait until `http://192.168.1.1` responds again
 - [ ] Enter your **node name** (must begin with your callsign)
 
 ---
 
-## 6. Configure AREDN
+## 5. Configure AREDN
 
 - [ ] Change your PC back to **DHCP**
 - [ ] Open `http://localnode.local.mesh` in your browser
@@ -118,7 +111,7 @@ Based on *AREDN Setup V2.3*.
 
 ---
 
-## 7. Make Your Phone Visible on the Network
+## 6. Make Your Phone Visible on the Network
 
 - [ ] Connect your SIP phone to HAP router **port 2–4**
 - [ ] Go to the **LAN DHCP** area on the AREDN admin page
@@ -129,7 +122,7 @@ Based on *AREDN Setup V2.3*.
 
 ---
 
-## 8. Install the Phonebook
+## 7. Install the Phonebook
 
 - [ ] Download the correct `.ipk` file from https://github.com/arednch/packages/releases
   - HAP AC Lite: `mips-24kc`
