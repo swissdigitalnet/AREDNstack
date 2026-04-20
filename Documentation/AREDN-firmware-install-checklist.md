@@ -106,8 +106,7 @@ Based on *AREDN Setup V2.3*.
 
 - [ ] Change your PC back to **DHCP**
 - [ ] Check the new LAN addressing: `ipconfig` → your Ethernet adapter should have an IPv4 like `10.x.x.x` with DNS suffix `local.mesh`. The **Default Gateway** is the hAP's new LAN IP.
-- [ ] Open `http://localnode/` (short name — Windows auto-appends the `local.mesh` suffix) or the gateway IP directly
-- [ ] If `http://localnode.local.mesh/` fails with `ERR_NAME_NOT_RESOLVED`, that's a known DNS quirk on fresh nodes — use `http://localnode/` or the gateway IP instead
+- [ ] Open **`http://localnode.local.mesh/`** — this is the normal way to reach an AREDN node. `http://localnode/` (short name) and the gateway IP also work as fallbacks.
 - [ ] Log in to the administration interface (user `root`, password you just set)
 - [ ] Configure radio settings:
   - Recommended: Wi-Fi on, 5 GHz mesh enabled
