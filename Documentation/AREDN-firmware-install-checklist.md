@@ -92,17 +92,23 @@ Based on *AREDN Setup V2.3*.
 - [ ] Open a browser and go to `http://192.168.1.1`
 - [ ] Verify you see the AREDN initial setup page (if not, go back to step 3)
 - [ ] Select the **sysupgrade file** for your device and click **"Upload"**
-- [ ] Wait until `http://192.168.1.1` responds again
-- [ ] Enter your **node name** (must begin with your callsign)
+- [ ] Wait until `http://192.168.1.1` responds again (~3 min — do not power-cycle)
+- [ ] The firstuse form loads. Enter:
+  - **Node name** — must begin with your callsign in capitals (e.g. `HB9BLA-hap-2`)
+  - **Password** — ≥4 chars, no `# ' "`, enter in both boxes
+- [ ] Click save — device reboots once more (~1–2 min)
 
 ---
 
 ## 5. Configure AREDN
 
+> After firstuse, AREDN **moves the LAN off `192.168.1.x`** onto a random `10.x.x.x/29` range. Pinging `192.168.1.1` will fail — that's expected, not a boot failure.
+
 - [ ] Change your PC back to **DHCP**
-- [ ] Open `http://localnode.local.mesh` in your browser
-- [ ] If no response, wait and retry (can take up to 15 minutes)
-- [ ] Log in to the administration interface
+- [ ] Check the new LAN addressing: `ipconfig` → your Ethernet adapter should have an IPv4 like `10.x.x.x` with DNS suffix `local.mesh`. The **Default Gateway** is the hAP's new LAN IP.
+- [ ] Open `http://localnode/` (short name — Windows auto-appends the `local.mesh` suffix) or the gateway IP directly
+- [ ] If `http://localnode.local.mesh/` fails with `ERR_NAME_NOT_RESOLVED`, that's a known DNS quirk on fresh nodes — use `http://localnode/` or the gateway IP instead
+- [ ] Log in to the administration interface (user `root`, password you just set)
 - [ ] Configure radio settings:
   - Recommended: Wi-Fi on, 5 GHz mesh enabled
   - If connected via cable to internet: 2.4 GHz radio can be turned "off"
