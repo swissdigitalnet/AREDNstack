@@ -117,18 +117,7 @@ Based on *AREDN Setup V2.3*.
 
 ---
 
-## 6. Make Your Phone Visible on the Network
-
-- [ ] Connect your SIP phone to HAP router **port 2–4**
-- [ ] Go to the **LAN DHCP** area on the AREDN admin page
-- [ ] Find your phone in the list and press **"+"**
-- [ ] Change its name to your assigned phone number
-- [ ] **Untick** "do not propagate" so the phone is visible on the mesh
-- [ ] Verify: go to **Node Status → Mesh Status** — phone should appear under your router
-
----
-
-## 7. Install the Phonebook
+## 6. Install the Phonebook
 
 - [ ] Download the correct `.ipk` file from https://github.com/arednch/packages/releases
   - HAP AC Lite: `mips-24kc`
@@ -138,3 +127,14 @@ Based on *AREDN Setup V2.3*.
 - [ ] Reboot the router
 - [ ] Verify phonebook: open `http://localnode.local.mesh:8081/phonebook?format=direct&target=generic&ia=true`
 - [ ] If empty, force reload: `http://localnode.local.mesh:8081/reload`
+
+---
+
+## 7. Make Your Phone Visible on the Network
+
+- [ ] Connect your SIP phone to HAP router **port 2–4**
+- [ ] Go to the **LAN DHCP** area on the AREDN admin page
+- [ ] Find your phone in the list and press **"+"**
+- [ ] Change its name to your assigned phone number
+- [ ] **Untick** "do not propagate" so the phone is visible on the mesh
+- [ ] Verify: go to **Node Status → Mesh Status** — phone should appear under your router
