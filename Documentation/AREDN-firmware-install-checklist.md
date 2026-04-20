@@ -119,14 +119,13 @@ Based on *AREDN Setup V2.3*.
 
 ## 6. Install the Phonebook
 
-- [ ] Download the correct `.ipk` file from https://github.com/arednch/packages/releases
-  - HAP AC Lite: `mips-24kc`
-  - HAP AC3: `arm-cortex`
-- [ ] Go to **Installed Packages** in the AREDN admin UI
-- [ ] Upload the `.ipk` file to install
-- [ ] Reboot the router
-- [ ] Verify phonebook: open `http://localnode.local.mesh:8081/phonebook?format=direct&target=generic&ia=true`
-- [ ] If empty, force reload: `http://localnode.local.mesh:8081/reload`
+- [ ] Download the correct `.ipk` file from https://github.com/swissdigitalnet/AREDN-Phonebook/releases
+  - HAP AC Lite (ath79): `mips_24kc` file
+  - HAP AC3 (ipq40xx): `arm_cortex-a7_neon-vfpv4` file
+- [ ] In the AREDN admin UI go to **Administration → Package Management**, upload the `.ipk`, click **Fetch and Install**
+- [ ] The `AREDN-Phonebook` service starts automatically and populates the XML within seconds — **no reboot required** on fresh install (after an upgrade a power-cycle can help)
+- [ ] Verify: open `http://localnode.local.mesh/arednstack/phonebook_generic_direct.xml` — the Yealink directory XML should load (~25 KB)
+- [ ] (Optional) Open the AREDNmon dashboard: `http://localnode.local.mesh/cgi-bin/arednmon`
 
 ---
 
