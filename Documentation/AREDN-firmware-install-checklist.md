@@ -36,10 +36,10 @@ Based on *AREDN Setup V2.3*.
 ## 1. Preparation
 
 - [ ] Download the [AREDNstack repo](https://github.com/swissdigitalnet/AREDNstack) as ZIP and extract it
-- [ ] Download the correct **kernel** and **sysupgrade** files for your device from https://downloads.arednmesh.org/afs/www/
-  - HAP AC Lite: `mips-24kc` files
-  - HAP AC3: `arm-cortex` files
-  - 📡 SXTsq: check exact model name — every letter matters!
+- [ ] Download the correct **kernel** (`-initramfs-kernel.bin`) and **sysupgrade** (`-squashfs-sysupgrade.bin`) files for your device from https://downloads.arednmesh.org/releases/ — drill down to `<major>/<minor>/<full>/targets/<target>/` and match filenames by device keyword:
+  - HAP AC Lite: `targets/ath79/mikrotik/` — filenames containing `952ui-5ac2nd`
+  - HAP AC3: `targets/ipq40xx/mikrotik/` — filenames containing `hap-ac3`
+  - 📡 SXTsq: `targets/ath79/mikrotik/` — filenames containing `sxtsq-5-ac` (verify exact model against the sticker — every letter matters!)
 - [ ] Rename the kernel `.bin` file to **`rb.elf`**
 - [ ] Download and unpack [Tiny PXE Server](http://erwan.labalec.fr/tinypxeserver/pxesrv.zip)
 - [ ] Copy `rb.elf` into the PXE server's `files/` folder
