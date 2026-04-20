@@ -1,7 +1,7 @@
 # AREDN Firmware Installation Checklist
 
 Step-by-step to-do list for flashing AREDN firmware on MikroTik HAP routers and SXTsq dishes.
-Based on *AREDN Setup V2.3* by Andreas Spiess, HB9BLA.
+Based on *AREDN Setup V2.3*.
 
 > Differences for the **SXTsq dish** (single Ethernet port) are marked with: 📡
 
@@ -13,8 +13,8 @@ Based on *AREDN Setup V2.3* by Andreas Spiess, HB9BLA.
 
 - [ ] **MikroTik HAP AC Lite** or **HAP AC3** router
 - [ ] 📡 *or* **MikroTik SXTsq** dish (single Ethernet port)
-- [ ] **AC power supply** (24V) for the HAP router
-- [ ] 📡 **PoE injector** (Y-cable) or passive PoE switch for the SXTsq (24V — the HAP power supply also works)
+- [ ] **AC power supply** (12V or 24V) for the HAP router
+- [ ] 📡 **PoE injector** (Y-cable) or passive PoE switch for the SXTsq (12V or 24V)
 - [ ] **Dumb Ethernet switch** (unmanaged, no DHCP)
 - [ ] **2x Ethernet cables** (one PC-to-switch, one switch-to-device)
 - [ ] **SIP phone** (Yealink T-series recommended)
