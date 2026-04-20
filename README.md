@@ -67,7 +67,7 @@ Some documentation is included — see `Documentation/Phones/`.
 ## 🚀 Getting Started
 
 1. **Choose your router** — MikroTik HAP AC3 recommended
-2. **Read the setup guide** — Open `Documentation/AREDN SetupV2.3-English.pdf`
+2. **Read the setup guide** — Open [Documentation/AREDN SetupV2.3-English.pdf](Documentation/AREDN%20SetupV2.3-English.pdf)
 3. **Flash AREDN firmware** — Follow the [AREDN documentation](https://docs.arednmesh.org/)
 4. **Install the Phonebook** — See [AREDN-Phonebook](https://github.com/swissdigitalnet/AREDN-Phonebook) for the SIP directory server
 5. **Provision SIP phones** — Use the firmware and templates from `Firmware Repo/`
