@@ -90,8 +90,6 @@ Based on *AREDN Setup V2.3* by Andreas Spiess, HB9BLA.
 - [ ] **Commit** changes when prompted
 - [ ] Reboot if asked
 
-> 📡 **SXTsq**: Tunnel setup (next section) does **not apply** — tunnels are only for HAP routers.
-
 ---
 
 ## 7. Make Your Phone Visible on the Network
@@ -105,26 +103,7 @@ Based on *AREDN Setup V2.3* by Andreas Spiess, HB9BLA.
 
 ---
 
-## 8. Set Up a Tunnel (HAP Routers Only)
-
-> 📡 **SXTsq**: Skip this section entirely.
-
-- [ ] Connect HAP **port 1** (Internet) to your internet connection
-- [ ] Access router via ports 2–4 or Wi-Fi
-- [ ] Get tunnel credentials from the tunnel server owner:
-  - Server address
-  - Password
-  - Network address
-- [ ] Leave "Tunnel server" field **blank** (you are a client)
-- [ ] Choose **Wireguard** or **Legacy** client
-- [ ] Press **"+"** and enter the credentials
-- [ ] **Commit** changes
-- [ ] Verify: tunnel status should turn **green**
-- [ ] Check **Node Status → Mesh Status** — network should populate
-
----
-
-## 9. Install the Phonebook
+## 8. Install the Phonebook
 
 - [ ] Download the correct `.ipk` file from https://github.com/arednch/packages/releases
   - HAP AC Lite: `mips-24kc`
@@ -134,9 +113,6 @@ Based on *AREDN Setup V2.3* by Andreas Spiess, HB9BLA.
 - [ ] Reboot the router
 - [ ] Verify phonebook: open `http://localnode.local.mesh:8081/phonebook?format=direct&target=generic&ia=true`
 - [ ] If empty, force reload: `http://localnode.local.mesh:8081/reload`
-
-> **HAP Lite + AREDN 3.25.0+**: Not enough memory for phonebook on the router.
-> Use a **Raspberry Pi** instead — see the setup guide for Pi Zero / Pi 3 instructions.
 
 ---
 
@@ -148,5 +124,3 @@ Based on *AREDN Setup V2.3* by Andreas Spiess, HB9BLA.
 | Power supply | AC adapter (no PoE!) | **PoE injector required** (24V) |
 | PXE flash cable | Port 1 (Internet) | Only socket |
 | After PXE flash | Move cable to port 2 | **Leave cable in same socket** |
-| Tunnel support | Yes (Wireguard/Legacy) | **No** |
-| Phonebook install | On router or Pi | On router or Pi |
